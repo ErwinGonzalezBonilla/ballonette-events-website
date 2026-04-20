@@ -300,3 +300,51 @@ body::before {
     max-width: 260px;
   }
 }
+
+/* ================= BURGER ================= */
+.burger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* NAV MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
